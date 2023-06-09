@@ -29,11 +29,11 @@ if (isset($_POST['submit'])) {
 
     if ($stmtAlumnos->num_rows > 0) {
         $resultado = array('error' => false, 'mensaje' => '¡Inicio de sesión exitoso para alumnos!');
-        header("Location: pagina.html");
+        header("Location: pagina.php");
         exit();
     } elseif ($stmtAdministativos->num_rows > 0) {
         $resultado = array('error' => false, 'mensaje' => '¡Inicio de sesión exitoso para administrativos!');
-        header("Location: admin.html");
+        header("Location: admin.php");
         exit();
     } else {
         $resultado = array('error' => true, 'mensaje' => 'Usuario o contraseña incorrectos');
@@ -78,12 +78,14 @@ $conn->close();
                                     <form method="post">
                                         <p>Inicia sesión</p>
                                         <div class="form-outline mb-4">
-                                            <input type="text" id="NoControl" name="NoControl" class="form-control" placeholder="Número de control" />
                                             <label class="form-label" for="NoControl">Usuario</label>
+                                            <input type="text" id="NoControl" name="NoControl" class="form-control" placeholder="Número de control" />
+                                            
                                         </div>
                                         <div class="form-outline mb-4">
-                                            <input type="password" id="Curp" name="Curp" class="form-control" placeholder="Contraseña" />
                                             <label class="form-label" for="Curp">Contraseña</label>
+                                            <input type="password" id="Curp" name="Curp" class="form-control" placeholder="Contraseña" />
+                                            
                                         </div>
                                         <div class="text-center pt-1 mb-5 pb-1">
                                             <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" name="submit">Iniciar sesión</button>

@@ -1,0 +1,16 @@
+.acomo{
+  display: flex;
+  justify-content: center;
+}
+
+.tablaA{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.tablaL{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
